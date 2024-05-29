@@ -103,12 +103,23 @@ img {
     align-items: flex-start
 }
 
-.jewellery-type{
+.jewellery-type {
     display: flex;
+    flex-direction: column;
     margin-top: 1rem;
-    gap: 0.2rem;
-    align-items: flex-start
+    gap: 0.5rem;
+    align-items: flex-start;
 }
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+.option input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
 
 .budget-type{
     display: flex;
