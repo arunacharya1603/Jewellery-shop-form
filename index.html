@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://media.istockphoto.com/id/155280698/photo/a-pile-of-scrap-gold-jewelry-on-a-white-background.webp?b=1&s=170667a&w=0&k=20&c=E4AJY7KXMRscyS62bJMI5XvHfpX-lmc_rH1AK6mrLDM="
+  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Customization Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <div class="form-container">
+        <form id="customizationForm">
+            <div class="form-step">
+                <label for="occasion">
+                    What is the occasion for this jewellery?
+                </label>
+                <select id="occasion" name="occasion" required>
+                    <option value="" disabled selected>Select an occasion</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="daily-wear">Daily-wear</option>
+                    <option value="custom">Other</option>
+                </select>
+                <input type="text" id="customOccasion" name="customOccasion" placeholder="Please specify" style="display: none;">
+            </div>
+
+            <div class="form-step">
+                <label>
+                    Is this a gift or a personal purchase?
+                </label>
+                <div class="gift-type">
+                    <input type="radio" id="gift" name="purchaseType" value="gift" required>
+                    <label for="gift">Gift</label>
+                    <input type="radio" id="personal" name="purchaseType" value="personal">
+                    <label for="personal">Personal Purchase</label>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <label>
+                    Please select the gender.
+                </label>
+                <div class="gender-type">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <label>
+                    What is the age group of the wearer?
+                </label>
+                <div class="age-type">
+                    <input type="radio" id="under18" name="ageGroup" value="<18" required>
+                    <label for="under18">&lt;18</label>
+                    <input type="radio" id="18-25" name="ageGroup" value="18-25">
+                    <label for="18-25">18-25</label>
+                    <input type="radio" id="26-35" name="ageGroup" value="26-35">
+                    <label for="26-35">26-35</label>
+                    <input type="radio" id="36-50" name="ageGroup" value="36-50">
+                    <label for="36-50">36-50</label>
+                    <input type="radio" id="51plus" name="ageGroup" value="51+">
+                    <label for="51plus">51+</label>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <label for="religion">
+                    Do you have any religious considerations for this jewellery? (Optional)
+                </label>
+                <select id="religion" name="religion">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="none">None</option>
+                    <option value="christianity">Christianity</option>
+                    <option value="islam">Islam</option>
+                    <option value="hinduism">Hinduism</option>
+                    <option value="buddhism">Buddhism</option>
+                    <option value="judaism">Judaism</option>
+                    <option value="sikhism">Sikhism</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-step">
+                <label>
+                    What type of jewellery are you interested in?
+                </label>
+                <div class="jewellery-type">
+                    <input type="radio" id="rings" name="jewelleryType" value="rings" required>
+                    <label for="rings">Rings</label>
+                    <input type="radio" id="necklaces" name="jewelleryType" value="necklaces">
+                    <label for="necklaces">Necklaces</label>
+                    <input type="radio" id="pendants" name="jewelleryType" value="pendants">
+                    <label for="pendants">Pendants</label>
+                    <input type="radio" id="bracelets" name="jewelleryType" value="bracelets">
+                    <label for="bracelets">Bracelets</label>
+                    <input type="radio" id="earrings" name="jewelleryType" value="earrings">
+                    <label for="earrings">Earrings</label>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <label>
+                    What is your budget for this jewellery?
+                </label>
+                <div class="budget-type">
+                    <input type="radio" id="under50" name="budget" value="<50" required>
+                    <label for="under50">&lt;$50</label>
+                    <input type="radio" id="50-100" name="budget" value="50-100">
+                    <label for="50-100">$50-$100</label>
+                    <input type="radio" id="100-200" name="budget" value="100-200">
+                    <label for="100-200">$100-$200</label>
+                    <input type="radio" id="200plus" name="budget" value="200+">
+                    <label for="200plus">$200+</label>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <label>
+                    Would you like to match your jewellery with an outfit?
+                </label>
+                <div class="outfit-type">
+                    <input type="radio" id="outfitYes" name="outfitMatch" value="yes" required>
+                    <label for="outfitYes">Yes</label>
+                    <input type="radio" id="outfitNo" name="outfitMatch" value="no">
+                    <label for="outfitNo">No</label>
+                </div>
+                <div id="outfitUpload" style="display: none;">
+                    <label for="outfitImage">Upload an image of your outfit:</label>
+                    <input type="file" id="outfitImage" name="outfitImage" accept="image/*" required>
+                    <img id="imagePreview" src="" alt="Outfit Image Preview" style="display: none;">
+                </div>
+            </div>
+
+            <button type="button" id="nextStep">Next</button>
+            <button type="submit" id="submitForm" style="display: none;">Submit</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
